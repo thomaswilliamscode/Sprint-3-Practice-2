@@ -66,6 +66,10 @@
 			return this.ints.filter ( int => ( int < 0 ) )
 		}
       // 🧠 Implement a `getAllSquared` method which returns an array with the integers squared
+		getAllSquared () {
+			 return this.ints.map ( int => ( int * int ) )
+			 
+		}
       // 🧠 Implement a `pop` method which removes the last integer from `ints`  and returns it
       // 🧠 Implement a `push` method which takes an int and pushes it to the end of `ints`, and returns the updated `ints` property
       // 🧠 Implement a `getEveryNth` method which takes an int `n` and returns an array with the ints at position 0, n, n + n, n + n + n, etc
