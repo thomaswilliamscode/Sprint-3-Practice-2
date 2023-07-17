@@ -102,11 +102,29 @@
     // 👉 CHALLENGE 2 NerfGun
     class NerfGun {
       // 🧠 Constructor takes one argument: the total number of projectiles supported by the instance
-      // 🧠 New instances initialize fully loaded and with the safety on
+		constructor ( max ) {
+			this.max = max
+			// 🧠 New instances initialize fully loaded and with the safety on
+			this.safety = true
+			this.current = this.max
+		}
+      
       // 🧠 Instances have a `shoot` method that takes no arguments:
-      //      * If there is ammo left and safety is off, method consumes one projectile and returns the string "Bang!"
-      //      * Shooting on empty or with the safety on, returns the string "Click!"
+		shoot () {
+			if ( this.current && !this.safety ) {
+				//      * If there is ammo left and safety is off, method consumes one projectile and returns the string "Bang!"
+				this.current --
+				return "Bang!"
+			}
+			//      * Shooting on empty or with the safety on, returns the string "Click!"
+			if ( !this.current || this.safety) {
+				return "Click!"
+			}
+		}
+      
+      
       // 🧠 Instances have a `reload` method that takes a number and tops up the instance by that number
+		
       //      * Reloading returns a string in the following format: "<number> projectiles left!"
       //      * Reloading by more than capacity fills the instance to capacity
       //      * Passing an argument which is not a number larger than zero returns the string "Error reloading!"
