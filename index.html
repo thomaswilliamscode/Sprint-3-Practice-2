@@ -62,6 +62,9 @@
 			return this.ints.filter ( int => ( int % 2 === 0 ) )
 		}
       // 🧠 Implement a `getNegatives` method which returns an array with the integers that negative
+		getNegatives () {
+			return this.ints.filter ( int => ( int < 0 ) )
+		}
       // 🧠 Implement a `getAllSquared` method which returns an array with the integers squared
       // 🧠 Implement a `pop` method which removes the last integer from `ints`  and returns it
       // 🧠 Implement a `push` method which takes an int and pushes it to the end of `ints`, and returns the updated `ints` property
