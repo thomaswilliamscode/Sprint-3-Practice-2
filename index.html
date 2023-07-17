@@ -46,9 +46,17 @@
 
     // 👉 CHALLENGE 1 - Integers
     class Integers {
-      // 🧠 Constructor takes **any** number of arguments, which are integers
-      // 🧠 Instances have an `ints` property which is an array holding the integers above in the same order
+		// 🧠 Constructor takes **any** number of arguments, which are integers
+		constructor (...integers) {
+			// 🧠 Instances have an `ints` property which is an array holding the integers above in the same order
+			this.ints = integers;
+		}
+      
+   
       // 🧠 Implement a `getAll` method which returns the data held in the `ints` property
+		getAll () {
+			return this.ints
+		}
       // 🧠 Implement a `getEvens` method which returns an array with the integers that are even
       // 🧠 Implement a `getNegatives` method which returns an array with the integers that negative
       // 🧠 Implement a `getAllSquared` method which returns an array with the integers squared
