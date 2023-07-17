@@ -89,6 +89,11 @@
 			return newArray
 		}
       // 🧠 Implement a `getAllReversed` method which returns the ints in reverse order
+		getAllReversed () {
+			let newArray = []
+			this.ints.forEach ( i => newArray.unshift( i ) ) 
+			return newArray
+		}
       // ❗ WARNING: except for `getAllReversed`, methods must respect the order of the integers
       // ❗ WARNING: note that none of the methods actually mutate the `ints` property
 
