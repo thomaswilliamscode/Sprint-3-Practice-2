@@ -58,6 +58,9 @@
 			return this.ints
 		}
       // 🧠 Implement a `getEvens` method which returns an array with the integers that are even
+		getEvens () {
+			return this.ints.filter ( int => ( int % 2 === 0 ) )
+		}
       // 🧠 Implement a `getNegatives` method which returns an array with the integers that negative
       // 🧠 Implement a `getAllSquared` method which returns an array with the integers squared
       // 🧠 Implement a `pop` method which removes the last integer from `ints`  and returns it
