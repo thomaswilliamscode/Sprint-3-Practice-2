@@ -209,11 +209,13 @@
 		work () {
 			//      * When invoked your ants do chores at a cost of 20 health points each
 			this.ants.forEach ( ant => ant.health -= 20 )
+			//      * If the `health` of any ant decreases to zero or below, it dies and is removed from `ants`
+			this.ants = this.ants.filter ( ant => ( ant.health > 0 ) )
 
 		}
       
       //      * The method takes no arguments and returns the string "<ant number> ants starting work!"
-      //      * If the `health` of any ant decreases to zero or below, it dies and is removed from `ants`
+
       //      * If `ants` contains no ants, the method returns "No ants here. Did you work them to death?"
       // 🧠 Instances of AntFarm have a `feed` method:
       //      * The method takes as its only argument the name of the particular ant(s) to feed
