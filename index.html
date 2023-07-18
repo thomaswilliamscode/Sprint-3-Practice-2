@@ -165,9 +165,23 @@
       // 🧠 Constructor takes two arguments:
       //      * First arg is a string with the whole text of the book
       //      * Second arg is the number of characters contained in a single page of the book
+		constructor (  wholeTextString, charsOnPage) {
+			this.wholeTextString = wholeTextString
+			this.charsOnPage = charsOnPage
+			this.currentPage = 0
+		}
       // 🧠 Instances have a `next` method:
       //      * It takes no args and returns the next page of the book
       //      * If the next page is empty because we have reached the end, return null instead
+		next () {
+			
+			let slice =  this.wholeTextString.slice( this.currentPage * this.charsOnPage, this.charsOnPage + ( this.currentPage * this.charsOnPage ) )
+			this.currentPage ++
+			if (  !slice) {
+				return null
+			}
+			return slice
+		}
       // 🧠 Example of usage:
       //    const ebook = new EBook('abcdefg', 3)
       //    ebook.next() // returns "abc"
